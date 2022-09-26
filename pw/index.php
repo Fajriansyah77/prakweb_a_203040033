@@ -44,7 +44,7 @@ $buku = $rows;
         <td><?= $i++; ?></td>
         <td><?= $row["judul_buku"]; ?> </td>
         <td><?= $row["penulis"]; ?></td>
-        <td><img src="img/<?= $row["gambar"]; ?>" alt="" width="100"></td>
+        <td><img src="img/<?= $row["gambar"]; ?>" alt="" width="180"></td>
       </tr>
     <?php endforeach; ?>
   </table>
