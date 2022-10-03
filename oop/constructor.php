@@ -1,6 +1,6 @@
 <?php
-class Produk
-{
+
+class Produk {
   public $judul,
     $penulis,
     $penerbit,
