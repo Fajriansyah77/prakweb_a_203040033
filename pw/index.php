@@ -35,9 +35,9 @@ $buku = $rows;
   <table border="1" cellpading="10" cellspacing="0">
     <tr>
       <th>No</th>
-      <th>judul_buku</th>
-      <th>penulis</th>
-      <th>gambar</th>
+      <th>Judul_buku</th>
+      <th>Penulis</th>
+      <th>Gambar</th>
     </tr>
     <?php $i = 1; ?>
     <?php foreach ($buku as $row) : ?>
@@ -46,6 +46,13 @@ $buku = $rows;
         <td><?= $row["judul_buku"]; ?> </td>
         <td><?= $row["penulis"]; ?></td>
         <td><img src="img/<?= $row["gambar"]; ?>" alt="" width="180"></td>
+        <td>
+        <center>
+                  <a href="ubah.php?id=<?= $row["id_buku"]; ?>">Ubah</a>
+                  <a href="hapus.php?id=<?= $row["id_buku"]; ?>">Hapus</a>
+                  <a href="tambah.php?id=<?= $row["id_buku"]; ?>">Tambah</a>
+                </center>
+        </td>
       </tr>
     <?php endforeach; ?>
   </table>
