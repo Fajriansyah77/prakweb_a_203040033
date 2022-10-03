@@ -40,7 +40,7 @@ function tambah($data)
   return mysqli_affected_rows($conn);
 }
 
-function hapus($id)
+function hapus($hps)
 {
   $conn = koneksi();
   mysqli_query($conn, "DELETE FROM buku WHERE id = $id") or die(mysqli_error($conn));
@@ -52,8 +52,8 @@ function ubah($data)
 {
   $conn = koneksi();
 
-  $id = $m['id'];
-  $judul_buku = htmlspecialchars($m['judul_buku']);
+  $id = $data['id'];
+  $judul_buku = htmlspecialchars($data['judul_buku']);
   $penulis = htmlspecialchars($data['penulis']);
   $img = htmlspecialchars($data['gambar']);
 
