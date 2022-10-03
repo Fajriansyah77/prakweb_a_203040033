@@ -1,20 +1,10 @@
 <?php
-// koneksi ke database
-$conn = mysqli_connect("localhost", "root", "", "prakweb_a_203040033_pw");
+session_start();
 
-// ambil dari tabel film / query
-$result = mysqli_query($conn, "SELECT * FROM buku");
+require 'php/function.php';
+$buku = query("SELECT * FROM buku");
 
-// ubah data ke dalam array
-// $row = mysqli_fetch_row($result); // array numerik
-// $row = mysqli_fetch_assoc($result); // array associative
-// $row = mysqli_fetch_array($result); // keduanya
-$rows = [];
-while ($row = mysqli_fetch_assoc($result)) {
-  $rows[] = $row;
-}
-// tampung ke variabel buku
-$buku = $rows;
+
 ?>
 
 <!DOCTYPE html>

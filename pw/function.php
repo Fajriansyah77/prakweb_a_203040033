@@ -43,7 +43,7 @@ function tambah($data)
 function hapus($hps)
 {
   $conn = koneksi();
-  mysqli_query($conn, "DELETE FROM buku WHERE id = $id") or die(mysqli_error($conn));
+  mysqli_query($conn, "DELETE FROM buku WHERE id_buku = $hps") or die(mysqli_error($conn));
 
   return mysqli_affected_rows($conn);
 }
@@ -55,12 +55,12 @@ function ubah($data)
   $id = $data['id'];
   $judul_buku = htmlspecialchars($data['judul_buku']);
   $penulis = htmlspecialchars($data['penulis']);
-  $img = htmlspecialchars($data['gambar']);
+  $img = htmlspecialchars($data['img']);
 
   $query = "UPDATE buku SET
               judul_buku = '$judul_buku',
               penulis = '$penulis',
-              img = '$gambar'
+              img = '$img'
               WHERE id = $id";
 
   mysqli_query($conn, $query) or die(mysqli_error($conn));

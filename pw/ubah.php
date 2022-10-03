@@ -1,8 +1,8 @@
 <?php
 require 'function.php';
 
-$id = $_GET['id'];
-$m = query("SELECT * FROM buku WHERE id_buku = $id");
+$data = $_GET['id'];
+$m = query("SELECT * FROM buku WHERE id_buku = $data");
 
 if (isset($_POST['ubah'])) {
     if (ubah($_POST) > 0) {
