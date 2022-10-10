@@ -16,7 +16,7 @@ class App {
         }
 
         require_once '../app/controllers/' . $this->controller . '.php';
-        $this->controller =  $this->controller;
+        $this->controller = new $this->controller;
 
         // method
         if( isset($url[1]) ) {
